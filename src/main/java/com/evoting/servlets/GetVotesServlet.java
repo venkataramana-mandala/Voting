@@ -25,7 +25,7 @@ public class GetVotesServlet extends HttpServlet {
         try (Connection con = DBConnection.getConnection()){
 
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM candidates");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM candidates order by votes desc");
 
             StringBuilder json = new StringBuilder("[");
             while (rs.next()) {
