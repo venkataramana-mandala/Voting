@@ -37,7 +37,7 @@ public class VotePageServlet extends HttpServlet {
         out.println("<a href='index.html'><i class='fas fa-home'></i> Home</a>");
         out.println("<a href='register.html'><i class='fas fa-user-plus'></i> Register</a>");
         out.println("<a href='login_voter.html'><i class='fas fa-sign-in-alt'></i> Voter Login</a>");
-        out.println("<a href='logout'><i class='fas fa-sign-out-alt'></i> Logout</a>");
+        out.println("<a href='index.html'><i class='fas fa-sign-out-alt'></i> Logout</a>");
         out.println("</div>");
         out.println("</nav>");
 
