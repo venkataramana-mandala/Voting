@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vote Successful</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .success-section {
+      text-align: center;
+      padding: 40px;
+      background-color: #ecf9f1;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .success-icon {
+      font-size: 60px;
+      color: #27ae60;
+      margin-bottom: 20px;
+    }
+
+    .success-section h2 {
+      font-size: 1.8em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .success-section a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .success-section a:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-title">
+      <i class="fas fa-vote-yea"></i> E-Voting
+    </div>
+    <div class="navbar-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Voter Register</a>
+      <a href="login_voter.html"><i class="fas fa-sign-in-alt"></i> Voter Login</a>
+      <a href="login_admin.html"><i class="fas fa-user-shield"></i> Admin Login</a>
+    </div>
+  </div>
+
+  <!-- Success Section -->
+  <div class="center">
+    <section class="success-section">
+      <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Thank you! Your vote has been successfully recorded.</h2>
+      <a href="index.html"><i class="fas fa-arrow-left"></i> Return to Home</a>
+    </section>
+  </div>
+
+</body>
+</html>

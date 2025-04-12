@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voter Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .register-form {
+      padding: 20px 0;
+    }
+
+    .register-form label {
+      font-weight: 500;
+      display: block;
+      margin-top: 12px;
+      color: #2c3e50;
+    }
+
+    .register-form input {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .register-form button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #27ae60;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .register-form button:hover {
+      background-color: #1e8449;
+      transform: translateY(-2px);
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-title">
+      <i class="fas fa-vote-yea"></i> E-Voting
+    </div>
+    <div class="navbar-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Voter Register</a>
+      <a href="login_voter.html"><i class="fas fa-sign-in-alt"></i> Voter Login</a>
+      <a href="login_admin.html"><i class="fas fa-user-shield"></i> Admin Login</a>
+    </div>
+  </div>
+
+  <!-- Registration Form Section -->
+  <div class="center">
+    <section>
+      <h2><i class="fas fa-user-plus"></i> Register as Voter</h2>
+      <form action="registerVoter" method="post" class="register-form">
+        <label for="voter_id">Voter ID:</label>
+        <input type="text" id="voter_id" name="voter_id" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit"><i class="fas fa-user-check"></i> Register</button>
+      </form>
+    </section>
+  </div>
+
+</body>
+</html>

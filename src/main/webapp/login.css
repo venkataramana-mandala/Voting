@@ -1,0 +1,90 @@
+/* login.css - used for LoginVoterServlet */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.status {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #555;
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}
+
+.warning {
+    color: #ffc107;
+}
+
+a.btn-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+a.btn-link:hover {
+    background: #0056b3;
+}
+
+/* Navbar reuse from style.css (if needed) */
+.navbar {
+    background-color: #2c3e50;
+    padding: 14px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-links {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #34495e;
+    border-radius: 6px;
+}

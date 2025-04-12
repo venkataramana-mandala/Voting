@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="votes.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .admin-card {
+      background-color: #ffffff;
+      padding: 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .admin-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .admin-card h3 {
+      font-size: 1.4em;
+      color: #2c3e50;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .admin-card form label {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 6px;
+      color: #34495e;
+    }
+
+    .admin-card form input {
+      margin-bottom: 14px;
+    }
+
+    .votes-section {
+      margin-top: 20px;
+    }
+
+    .vote-card {
+      background-color: #f0f4f8;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 1.9em;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .success-button {
+      background-color: #27ae60;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .success-button:hover {
+      background-color: #219150;
+      transform: translateY(-2px);
+    }
+
+    .danger-button {
+      background-color: #e74c3c;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .danger-button:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-title">
+      <i class="fas fa-vote-yea"></i> E-Voting
+    </div>
+    <div class="navbar-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+      <a href="login_voter.html"><i class="fas fa-sign-in-alt"></i> Voter Login</a>
+      <a href="login_admin.html"><i class="fas fa-user-shield"></i> Admin Login</a>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="center">
+    <section>
+      <div class="section-title"><i class="fas fa-tools"></i> Admin Control Panel</div>
+
+      <!-- Votes Section -->
+      <div class="admin-card votes-section">
+        <h3><i class="fas fa-chart-bar"></i> Candidate Votes</h3>
+        <div id="votesContainer">Loading votes...</div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="dashboard-grid">
+
+        <!-- Add Candidate -->
+        <div class="admin-card">
+          <h3><i class="fas fa-user-plus"></i> Add New Candidate</h3>
+          <form action="addCandidate" method="post">
+            <label for="name">Candidate Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="party">Party:</label>
+            <input type="text" id="party" name="party" required />
+
+            <button type="submit" class="success-button"><i class="fas fa-plus-circle"></i> Add Candidate</button>
+          </form>
+        </div>
+
+        <!-- Delete Candidate -->
+        <div class="admin-card">
+          <h3><i class="fas fa-user-minus"></i> Delete Candidate</h3>
+          <form action="deleteCandidate" method="post">
+            <label for="id">Candidate ID:</label>
+            <input type="text" id="id" name="id" required />
+            <button type="submit" class="danger-button"><i class="fas fa-trash-alt"></i> Delete</button>
+          </form>
+        </div>
+
+        <!-- Set Voting Time -->
+        <div class="admin-card">
+          <h3><i class="fas fa-clock"></i> Set Voting Time</h3>
+          <form action="setVotingTimeServlet" method="post">
+            <label for="startTime">Start Time:</label>
+            <input type="datetime-local" id="startTime" name="startTime" required />
+
+            <label for="endTime">End Time:</label>
+            <input type="datetime-local" id="endTime" name="endTime" required />
+
+            <button type="submit" class="success-button"><i class="fas fa-save"></i> Set Voting Period</button>
+          </form>
+        </div>
+
+        <!-- Reset Election -->
+        <div class="admin-card">
+          <h3><i class="fas fa-exclamation-triangle"></i> Reset Election</h3>
+          <form action="ResetElectionServlet" method="post" onsubmit="return confirm('Are you sure you want to reset the election? This will delete all data!');">
+            <button type="submit" class="danger-button"><i class="fas fa-trash"></i> Reset Entire Election</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

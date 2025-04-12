@@ -1,0 +1,61 @@
+/* register.css - Styles for RegisterVoterServlet message display */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f8fc;
+    margin: 0;
+    padding: 0;
+}
+
+.message-box {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.message-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.message-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+.message-box i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: #28a745;
+}
+
+.error {
+    color: #dc3545;
+}
+
+.warning {
+    color: #ffc107;
+}
+
+a.btn-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+a.btn-link:hover {
+    background: #0056b3;
+}

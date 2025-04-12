@@ -1,0 +1,51 @@
+/* setvotingtime.css - Styles specific to SetVotingTimeServlet messages */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef4fb;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    flex-direction: column;
+}
+
+.message-box {
+    background: #f0f8ff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+}
+
+.message-box h2 {
+    color: #2e7d32;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.message-box h2.error {
+    color: #c62828;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #005f7f;
+}

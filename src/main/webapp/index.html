@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Voting System | Digital Democracy Redefined</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f4f6f9, #e0eafc);
+      color: #2c3e50;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      padding: 18px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      color: #ecf0f1;
+    }
+
+    .navbar-links a {
+      color: #ecf0f1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar-links a:hover {
+      color: #1abc9c;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 80vh;
+      background: linear-gradient(to right, #1abc9c, #16a085);
+      color: white;
+      padding: 60px 20px;
+      clip-path: ellipse(100% 100% at 50% 0%);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      background-color: white;
+      color: #16a085;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+
+    .features {
+      padding: 80px 20px;
+      background-color: #f9fbfc;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    .feature-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 16px;
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .icon-circle {
+      font-size: 2.5em;
+      color: #1abc9c;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #2c3e50;
+    }
+
+    .feature-card p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .card-button {
+      display: inline-block;
+      background-color: #1abc9c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .card-button:hover {
+      background-color: #159c89;
+    }
+
+    .cta {
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-vote-yea"></i> E-Voting
+    </div>
+    <div class="navbar-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="register.html"><i class="fas fa-user-plus"></i> Register</a>
+      <a href="login_voter.html"><i class="fas fa-sign-in-alt"></i> Voter Login</a>
+      <a href="login_admin.html"><i class="fas fa-user-shield"></i> Admin Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1><i class="fas fa-vote-yea"></i> Empowering Digital Democracy</h1>
+      <p>Seamless, secure, and transparent online voting — built for modern governance.</p>
+      <a href="register.html" class="cta-button">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2 class="section-title">Core Features</h2>
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="icon-circle">
+          <i class="fas fa-user-edit"></i>
+        </div>
+        <h3>Smart Registration</h3>
+        <p>Effortless onboarding with instant validation and secure credentials.</p>
+        <a href="register.html" class="card-button">Register Now</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-circle">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Encrypted Access</h3>
+        <p>Advanced authentication and secure voting environment for every user.</p>
+        <a href="login_voter.html" class="card-button">Voter Login</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-circle">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Live Election Insights</h3>
+        <p>Real-time vote monitoring, analytics, and candidate management tools.</p>
+        <a href="login_admin.html" class="card-button">Admin Panel</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call-to-Action -->
+  <section class="cta">
+    <p><i class="fas fa-bullhorn"></i> Every vote counts — make your voice matter in a digital-first future.</p>
+  </section>
+
+</body>
+</html>
